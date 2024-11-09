@@ -145,128 +145,215 @@
       </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-10 mx-4 bg-black rounded-lg md:mx-8">
-      <div class="container relative px-4 mx-auto text-center">
-        <!-- Centered Circle Background -->
-        <div class="absolute inset-0 flex items-center justify-center">
-          <div
-            class="flex items-center justify-center rounded-full ring-2 ring-gray-500" style="width: 24rem; height: 24rem;">
-          >
-            <div
-              class="flex items-center justify-center rounded-full ring-2 ring-gray-500" style="width: 22rem; height: 22rem;">
-            >
-              <div
-                class="flex items-center justify-center rounded-full ring-2 ring-gray-500" style="width: 20rem; height: 20rem;">
-              ></div>
-            </div>
-          </div>
-        </div>
+ <!-- About Section -->
+<section id="about" class="py-10 mx-4 bg-black rounded-lg md:mx-8">
+  <div class="container relative px-4 mx-auto text-center">
+    <!-- Black background around title, rings, and features -->
+    <div class="py-10 bg-black rounded-lg">
+      <div class="relative z-10 mt-20">
+        <h3 class="mb-8 text-2xl font-semibold text-gray-400">
+          We Made Scanning Skin <span class="text-blue-500">Easier!</span>
+        </h3>
+      </div>
 
-        <!-- Main Heading with Circle Background -->
-        <div class="relative z-10">
-          <h3 class="mb-8 text-2xl font-semibold text-gray-400">
-            We Made Scanning Skin <span class="text-blue-500">Easier!</span>
-          </h3>
-        </div>
-
-        <!-- Features Section inside About Section -->
-        <div
-          class="container relative z-10 grid gap-8 px-4 mx-auto md:grid-cols-3"
-        >
-          <div class="p-6 text-center bg-gray-200 rounded-lg shadow-lg">
-            <h4 class="mb-4 text-lg font-semibold">
-              Recommend Product Skincare
-            </h4>
-            <img
-              src="assets/product.png"
-              alt="Recommend Product Skincare"
-              class="mx-auto mb-4"
-            />
-          </div>
-          <div class="p-6 text-center bg-gray-200 rounded-lg shadow-lg">
-            <h4 class="mb-4 text-lg font-semibold">Detection Your Skin</h4>
-            <img
-              src="assets/scan.png"
-              alt="Detection Your Skin"
-              class="mx-auto mb-4"
-            />
-          </div>
-          <div class="p-6 text-center bg-gray-200 rounded-lg shadow-lg">
-            <h4 class="mb-4 text-lg font-semibold">Tracking Your Progress</h4>
-            <img
-              src="assets/track.png"
-              alt="Tracking Your Progress"
-              class="mx-auto mb-4"
-            />
+      <!-- Centered Circle Background (Rings) -->
+      <div class="absolute inset-0 z-0 flex flex-col items-center justify-center md:flex-row" id="ringsContainer">
+        <div class="flex items-center justify-center rounded-full ring-2 ring-gray-500" id="outerRing">
+          <div class="flex items-center justify-center rounded-full ring-2 ring-gray-500" id="middleRing">
+            <div class="flex items-center justify-center rounded-full ring-2 ring-gray-500" id="innerRing"></div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Coming Soon Section -->
-    <section id="coming-soon" class="py-16 text-center bg-gray-50">
-      <div class="container px-4 mx-auto">
-        <h4 class="mb-6 text-xl font-semibold">To be released soon...</h4>
-        <div
-          class="relative flex flex-col items-center justify-between md:flex-row"
-        >
-          <div class="flex flex-col items-cetnter md:mr-6">
-            <table class="mb-6" style="width: 200px; height: 150px">
-              <tr>
-                <td class="pb-2" style="text-align: center">
-                  <a href="#">
-                    <img
-                      src="assets/playstore.png"
-                      alt="Google Play"
-                      class="w-60 h-60"
-                    />
-                  </a>
-                </td>
-              </tr>
-              <tr>
-                <td style="text-align: center">
-                  <a href="#">
-                    <img
-                      src="assets/appstore.png"
-                      alt="App Store"
-                      class="w-60 h-60"
-                    />
-                  </a>
-                </td>
-              </tr>
-            </table>
-          </div>
-          <div class="relative flex items-center justify-center">
-            <div
-              class="flex items-center justify-center rounded-full w-52 h-52 ring-2 ring-gray-400"
-            >
-              <div
-                class="flex items-center justify-center w-48 h-48 rounded-full ring-2 ring-gray-400"
-              >
-                <div
-                  class="flex items-center justify-center rounded-full w-44 h-44 ring-2 ring-gray-400"
-                >
-                  <img
-                    src="assets/start.png"
-                    alt="Phone Mockup"
-                    class="w-3/4 h-3/4"
-                  />
-                </div>
+     <!-- Features Section -->
+<div class="container relative z-10 grid gap-8 px-4 py-10 mx-auto md:grid-cols-3 sm:grid-cols-1" id="featuresContainer">
+  <div class="p-6 text-center bg-gray-200 rounded-lg shadow-lg" id="feature1">
+    <h4 class="mb-4 text-lg font-semibold text-black">Recommend Product Skincare</h4>
+    <table class="mx-auto mb-4">
+      <tr>
+        <td>
+          <img src="assets/product.png" alt="Recommend Product Skincare" 
+               class="feature-image" 
+               style="width: 100%; max-width: 12rem; max-height: 12rem; object-fit: contain;" />
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="p-6 text-center bg-gray-200 rounded-lg shadow-lg" id="feature2">
+    <h4 class="mb-4 text-lg font-semibold text-black">Detection Your Skin</h4>
+    <table class="mx-auto mb-4">
+      <tr>
+        <td>
+          <img src="assets/scan.png" alt="Detection Your Skin" 
+               class="feature-image" 
+               style="width: 100%; max-width: 12rem; max-height: 12rem; object-fit: contain;" />
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="p-6 text-center bg-gray-200 rounded-lg shadow-lg" id="feature3">
+    <h4 class="mb-4 text-lg font-semibold text-black">Tracking Your Progress</h4>
+    <table class="mx-auto mb-4">
+      <tr>
+        <td>
+          <img src="assets/track.png" alt="Tracking Your Progress" 
+               class="feature-image" 
+               style="width: 100%; max-width: 12rem; max-height: 12rem; object-fit: contain;" />
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+</section>
+
+<style>
+.feature-image {
+  width: 100%;
+  object-fit: contain; 
+}
+
+/* Desktop version */
+@media (min-width: 768px) {
+  .feature-image {
+    max-width: 50rem; 
+    max-height: 50rem; 
+  }
+}
+/* Mobile version */
+@media (max-width: 767px) {
+  .feature-image {
+    max-width: 32rem; 
+    max-height: 22rem; 
+  }
+}
+
+</style>
+
+<script>
+function adjustLayoutBasedOnScreenSize() {
+  const windowWidth = window.innerWidth;
+  const ringsContainer = document.getElementById('ringsContainer');
+  const outerRing = document.getElementById('outerRing');
+  const middleRing = document.getElementById('middleRing');
+  const innerRing = document.getElementById('innerRing');
+  const featuresContainer = document.getElementById('featuresContainer');
+  const feature1 = document.getElementById('feature1');
+  const feature2 = document.getElementById('feature2');
+  const feature3 = document.getElementById('feature3');
+
+  if (windowWidth < 768) {
+      // mobile
+      ringsContainer.classList.remove('flex-row');
+      ringsContainer.classList.add('flex-col'); 
+
+      outerRing.style.width = "12rem"; 
+      outerRing.style.height = "12rem";
+
+      middleRing.style.width = "10rem"; 
+      middleRing.style.height = "10rem";
+
+      innerRing.style.width = "8rem"; 
+      innerRing.style.height = "8rem";
+      
+      feature1.style.width = '12rem';
+      feature1.style.height = '16rem';
+      feature2.style.width = '12rem';
+      feature2.style.height = '16rem';
+      feature3.style.width = '12rem';
+      feature3.style.height = '16rem';
+
+      featuresContainer.classList.remove('md:grid-cols-3');
+      featuresContainer.classList.add('sm:grid-cols-1');
+      
+      featuresContainer.style.display = 'flex';
+      featuresContainer.style.flexDirection = 'column';
+      featuresContainer.style.alignItems = 'center';
+  } else {
+    // web
+      ringsContainer.classList.remove('flex-col');
+      ringsContainer.classList.add('flex-row'); 
+
+      outerRing.style.width = "27rem"; 
+      outerRing.style.height = "27rem";
+
+      middleRing.style.width = "24rem"; 
+      middleRing.style.height = "24rem";
+
+      innerRing.style.width = "21rem"; 
+      innerRing.style.height = "21rem";
+
+      feature1.style.width = '14rem'; 
+      feature1.style.height = '18rem';
+      feature2.style.width = '14rem';
+      feature2.style.height = '18rem';
+      feature3.style.width = '14rem';
+      feature3.style.height = '18rem';
+
+      featuresContainer.classList.remove('sm:grid-cols-1');
+      featuresContainer.classList.add('md:grid-cols-3'); 
+      
+      featuresContainer.style.display = 'flex';
+      featuresContainer.style.flexDirection = 'row'; 
+      featuresContainer.style.justifyContent = 'center';
+      featuresContainer.style.alignItems = 'center';
+  }
+}
+
+window.addEventListener('load', adjustLayoutBasedOnScreenSize);
+window.addEventListener('resize', adjustLayoutBasedOnScreenSize);
+
+</script>
+
+
+<!-- Coming Soon Section -->
+<section id="coming-soon" class="py-16 text-center bg-gray-50">
+  <div class="container px-4 mx-auto">
+    <h4 class="mb-6 text-xl font-semibold">To be released soon...</h4>
+    <div class="relative flex flex-col items-center justify-between md:flex-row">
+      <div class="flex flex-col items-center md:mr-6">
+        <table class="mx-auto mb-6" style="width: auto; text-align: center;">
+          <tr>
+            <td style="padding-bottom: 2px;"> 
+              <div class="flex items-center justify-center">
+                <a href="#">
+                  <img src="assets/playstore.png" alt="Google Play" class="w-60 h-60" />
+                </a>
               </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="flex items-center justify-center">
+                <a href="#">
+                  <img src="assets/appstore.png" alt="App Store" class="w-60 h-60" />
+                </a>
+              </div>
+            </td>
+          </tr>
+        </table>
+        
+        
+      </div>
+      <div class="relative flex items-center justify-center">
+        <div class="flex items-center justify-center rounded-full w-52 h-52 ring-2 ring-gray-400">
+          <div class="flex items-center justify-center w-48 h-48 rounded-full ring-2 ring-gray-400">
+            <div class="flex items-center justify-center rounded-full w-44 h-44 ring-2 ring-gray-400">
+              <img src="assets/start.png" alt="Phone Mockup" class="w-3/4 h-3/4" />
             </div>
-          </div>
-          <div class="md:text-left md:w-1/2">
-            <p class="mb-6 text-gray-700">
-              Achieve flawless skin with Skinsense! Get personalized skincare
-              solutions with advanced technology. Say goodbye to guesswork and
-              hello to a routine that works. Enjoy clear, glowing skin with
-              Skinsense!
-            </p>
           </div>
         </div>
       </div>
-    </section>
+      <div class="md:text-left md:w-1/2" style="padding-right: 20px; padding-left: 20px;">
+        <p class="mb-6 text-gray-700">
+          Achieve flawless skin with Skinsense! Get personalized skincare solutions with advanced technology. Say goodbye to guesswork and hello to a routine that works. Enjoy clear, glowing skin with Skinsense!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- Footer Section -->
     <footer class="py-10 mx-4 text-gray-600 bg-gray-200 rounded-t-lg md:mx-8">
