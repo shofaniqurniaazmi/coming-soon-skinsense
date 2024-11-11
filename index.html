@@ -11,7 +11,7 @@
   </head>
   <body class="bg-gray-50">
     <!-- Navbar Section -->
-    <nav class="fixed top-0 z-20 w-full py-2 bg-white shadow-md">
+    <nav class="fixed top-0 z-20 w-full py-2 bg-white ">
       <div class="container flex items-center justify-between px-6 mx-auto">
         <img
           src="assets/logo.png"
@@ -58,38 +58,26 @@
 
     <!-- Sidebar for Mobile -->
     <div
-      id="sidebar"
-      class="fixed inset-y-0 left-0 right-28 w-1/2 z-20 flex flex-col hidden transition-transform transform -translate-x-full bg-blue-700 bg-opacity-100 md:hidden"
-    >
-      <div class="flex items-center justify-between p-4">
-        <img src="assets/logo.png" alt="Logo Skinsense" class="w-24 h-auto" />
-        <button id="close-button" class="absolute left-48 transform -translate-x-1/2 flex items-center justify-center w-10 h-10 bg-[#0047B3] rounded-full shadow-md text-white">
-          <svg
-            class="w-10 h-10"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"
-            ></path>
-          </svg>
-        </button>
-      </div>
-      <ul class="mt-8 space-y-4 text-xl text-center text-white">
-        <li><a href="#home" class="hover:text-blue-200">Home</a></li>
-        <li><a href="#features" class="hover:text-blue-200">Feature</a></li>
-        <li><a href="#blog" class="hover:text-blue-200">Blog</a></li>
-        <li><a href="#support" class="hover:text-blue-200">Support</a></li>
-      </ul>
+    id="sidebar"
+    class="fixed inset-y-0 left-0 w-2/3 h-full z-20 flex flex-col hidden transition-transform transform -translate-x-full bg-blue-700 bg-opacity-100 md:hidden"
+  >
+    <div class="flex items-center justify-between p-4">
+      <img src="assets/LogoPutih.png" alt="Logo Skinsense" class="w-24 h-auto" />
+      <span class="font-peddana text-2xl text-white">Skinsense</span>
+      <button id="close-button" class="absolute left-52 transform -translate-x-1/2 flex items-center justify-center w-8 h-8 bg-blue-600 rounded-full text-white shadow-md">
+        <span class="text-4xl">&times;</span>
+      </button>
+    </div>
+    <ul class="mt-8 space-y-4 text-xl text-left text-white px-10">
+      <li><a href="#home" class="hover:text-blue-200">Home</a></li>
+      <li><a href="#features" class="hover:text-blue-200">Feature</a></li>
+      <li><a href="#blog" class="hover:text-blue-200">Blog</a></li>
+      <li><a href="#support" class="hover:text-blue-200">Support</a></li>
+    </ul>
       <div class="mt-auto mb-4 text-center">
         <a
           href="#"
-          class="px-4 py-2 font-semibold text-blue-700 bg-white border border-blue-700 rounded-md hover:bg-blue-700 hover:text-white"
+          class="px-16 py-2 font-semibold text-blue-700 bg-white border border-blue-700 rounded-md hover:bg-blue-700 hover:text-white"
           >Sign In</a
         >
       </div>
@@ -171,6 +159,7 @@
         </div>
 
         <!-- Features Section inside About Section -->
+        <section id="features">
         <div class="container relative z-10 grid gap-8 px-4 mx-auto md:grid-cols-3">
           <div class="p-6 text-center bg-gray-200 shadow-lg" style="border-radius: 15px;">
             <h4 class="mb-4 text-lg font-semibold">
@@ -204,7 +193,7 @@
     </section>
 
     <!-- Coming Soon Section -->
-    <section id="coming-soon" class="py-16 text-center bg-gray-50">
+    <section id="blog" class="py-16 text-center bg-gray-50">
       <div class="container px-4 mx-auto">
         <h4 class="mb-6 text-xl font-semibold">To be released soon...</h4>
         <div
@@ -268,6 +257,7 @@
     </section>
 
     <!-- Footer Section -->
+
     <footer class="py-10 mx-4 text-gray-600 bg-gray-200 rounded-t-lg md:mx-8">
       <div
         class="container grid grid-cols-1 gap-4 px-4 mx-auto text-left md:grid-cols-4"
@@ -308,6 +298,7 @@
               </ul>
             </div>
             <div>
+              <div id="support">
               <h5 class="mb-2 font-semibold text-black">Support</h5>
               <ul class="text-sm">
                 <li>
