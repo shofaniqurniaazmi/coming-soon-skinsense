@@ -9,12 +9,13 @@
     />
     <title>Skinsense - Coming Soon</title>
   </head>
+  
 <!-- Navbar -->
 <body class="bg-gray-50">
   <div class="bg-white">
-    <header class="absolute inset-x-0 top-0 z-50">
-      <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-        <div class="flex lg:flex-1">
+    <header class="fixed inset-x-0 top-0 z-50 shadow-md">
+      <nav class="flex items-center justify-between w-full p-6 transition-all duration-300 ease-in-out bg-white lg:px-8" aria-label="Global">
+        <div class="container flex lg:flex-1">
           <a href="#" class="flex items-center -m-1.5 p-1.5">
             <img class="w-auto h-10 lg:h-12" src="assets/logo.png?color=indigo&shade=6000" alt="Logo">
             <span class="ml-2 text-lg font-semibold text-gray-900 lg:text-xl">Skinsense</span>
@@ -64,197 +65,122 @@
 </div>
 
 <!-- About Section -->
-<section id="about" class="py-4 mx-4 mt-0 bg-black rounded-lg md:mx-6"> 
-  <div class="container relative px-4 mx-auto text-center">
-    <div class="py-16 bg-black rounded-lg" style="max-width: 700px; margin: 0 auto;">
-      <div class="relative z-20 mt-20">
-        <h3 class="mb-8 text-2xl font-semibold text-gray-400">
-          We Made Scanning Skin <span class="text-blue-500">Easier!</span>
-        </h3>
-      </div>
-
-      <!-- Centered Circle Background (Rings) -->
-      <div class="absolute inset-0 z-0 flex flex-col items-center justify-center md:flex-row" id="ringsContainer">
-        <div class="flex items-center justify-center rounded-full ring-2 ring-gray-500" id="outerRing" style="width: 450px; height: 450px;">
-          <div class="flex items-center justify-center rounded-full ring-2 ring-gray-500" id="middleRing" style="width: 400px; height: 400px;">
-            <div class="flex items-center justify-center rounded-full ring-2 ring-gray-500" id="innerRing" style="width: 350px; height: 350px;"></div>
+<div class="py-16 bg-black rounded-lg" style="width: 1400px; height: 600px; margin: 0 auto; position: relative;">
+  <h3 class="absolute z-10 text-2xl font-semibold text-gray-400" style="top: 10%; width: 100%; text-align: center;">
+      We Made Scanning Skin <span class="text-blue-500">Easier!</span>
+  </h3>
+  
+  <!-- Ring Background -->
+  <div class="absolute inset-0 z-0 flex flex-col items-center justify-center" style="top: 20%;">
+      <div class="flex items-center justify-center rounded-full ring-2 ring-gray-500" style="width: 450px; height: 450px;">
+          <div class="flex items-center justify-center rounded-full ring-2 ring-gray-500" style="width: 400px; height: 400px;">
+              <div class="flex items-center justify-center rounded-full ring-2 ring-gray-500" style="width: 350px; height: 350px;"></div>
           </div>
-        </div>
       </div>
+  </div>
+  
+  <!-- Features Section -->
+<div class="container relative z-10 flex items-center justify-center py-10 mx-auto" id="featuresContainer" style="margin-top: 40px;">
+  <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-3" style="max-width: 1200px; width: 100%;">
+    <div class="p-6 text-center bg-gray-200 rounded-lg shadow-lg" id="feature1" style="width: 300px; height: 400px;">
+      <h4 class="mb-4 text-lg font-semibold text-black">Recommend Product Skincare</h4>
+      <table class="mx-auto mb-4">
+        <tr>
+          <td>
+            <img src="assets/product.png" alt="Recommend Product Skincare" 
+                 class="feature-image" 
+                 style="width: 100%; height: 100%; object-fit: cover;" />
+          </td>
+        </tr>
+      </table>
+    </div>
 
-      <!-- Features Section -->
-      <div class="container relative z-10 grid gap-8 px-4 py-10 mx-auto md:grid-cols-3 sm:grid-cols-1" id="featuresContainer">
-        <div class="p-6 text-center bg-gray-200 rounded-lg shadow-lg" id="feature1">
-          <h4 class="mb-4 text-lg font-semibold text-black">Recommend Product Skincare</h4>
-          <table class="mx-auto mb-4">
-            <tr>
-              <td>
-                <img src="assets/product.png" alt="Recommend Product Skincare" 
-                     class="feature-image" 
-                     style="width: 100%; max-width: 12rem; max-height: 12rem; object-fit: contain;" />
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="p-6 text-center bg-gray-200 rounded-lg shadow-lg" id="feature2">
-          <h4 class="mb-4 text-lg font-semibold text-black">Detection Your Skin</h4>
-          <table class="mx-auto mb-4">
-            <tr>
-              <td>
-                <img src="assets/scan.png" alt="Detection Your Skin" 
-                     class="feature-image" 
-                     style="width: 100%; max-width: 12rem; max-height: 12rem; object-fit: contain;" />
-              </td>
-            </tr>
-          </table>
-        </div>
-        <div class="p-6 text-center bg-gray-200 rounded-lg shadow-lg" id="feature3" style="width: 600px; height: 500px;">
-          <h4 class="mb-4 text-lg font-semibold text-black">Tracking Your Progress</h4>
-          <table class="mx-auto mb-4">
-            <tr>
-              <td>
-                <img src="assets/track.png" alt="Tracking Your Progress" class="w-[900px] h-[800px]" />
-              </td>
-            </tr>
-          </table>
-        </div>              
-      </div>
+    <div class="p-6 text-center bg-gray-200 rounded-lg shadow-lg" id="feature2" style="width: 300px; height: 400px;">
+      <h4 class="mb-4 text-lg font-semibold text-black">Detection Your Skin</h4>
+      <table class="mx-auto mb-4">
+        <tr>
+          <td>
+            <img src="assets/scan.png" alt="Detection Your Skin" 
+                 class="feature-image" 
+                 style="width: 100%; height: 100%; object-fit: cover;" />
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="p-6 text-center bg-gray-200 rounded-lg shadow-lg" id="feature3" style="width: 300px; height: 400px;">
+      <h4 class="mb-4 text-lg font-semibold text-black">Tracking Your Progress</h4>
+      <table class="mx-auto mb-4">
+        <tr>
+          <td>
+            <img src="assets/track.png" alt="Tracking Your Progress" 
+                 class="feature-image" 
+                 style="width: 100%; height: 100%; object-fit: cover;" />
+          </td>
+        </tr>
+      </table>
     </div>
   </div>
-</section>
-
-<script>
-function adjustLayoutBasedOnScreenSize() {
-  const windowWidth = window.innerWidth;
-  const ringsContainer = document.getElementById('ringsContainer');
-  const outerRing = document.getElementById('outerRing');
-  const middleRing = document.getElementById('middleRing');
-  const innerRing = document.getElementById('innerRing');
-  const featuresContainer = document.getElementById('featuresContainer');
-  const feature1 = document.getElementById('feature1');
-  const feature2 = document.getElementById('feature2');
-  const feature3 = document.getElementById('feature3');
-
-  if (windowWidth < 768) {
-      // mobile
-      ringsContainer.classList.remove('flex-row');
-      ringsContainer.classList.add('flex-col'); 
-
-      outerRing.style.width = "12rem"; 
-      outerRing.style.height = "12rem";
-
-      middleRing.style.width = "10rem"; 
-      middleRing.style.height = "10rem";
-
-      innerRing.style.width = "8rem"; 
-      innerRing.style.height = "8rem";
-      
-      feature1.style.width = '12rem';
-      feature1.style.height = '16rem';
-      feature2.style.width = '12rem';
-      feature2.style.height = '16rem';
-      feature3.style.width = '12rem';
-      feature3.style.height = '16rem';
-
-      featuresContainer.classList.remove('md:grid-cols-3');
-      featuresContainer.classList.add('sm:grid-cols-1');
-      
-      featuresContainer.style.display = 'flex';
-      featuresContainer.style.flexDirection = 'column';
-      featuresContainer.style.alignItems = 'center';
-  } else {
-    // web
-      ringsContainer.classList.remove('flex-col');
-      ringsContainer.classList.add('flex-row'); 
-
-      outerRing.style.width = "27rem"; 
-      outerRing.style.height = "27rem";
-
-      middleRing.style.width = "24rem"; 
-      middleRing.style.height = "24rem";
-
-      innerRing.style.width = "21rem"; 
-      innerRing.style.height = "21rem";
-
-      feature1.style.width = '14rem'; 
-      feature1.style.height = '18rem';
-      feature2.style.width = '14rem';
-      feature2.style.height = '18rem';
-      feature3.style.width = '14rem';
-      feature3.style.height = '18rem';
-
-      featuresContainer.classList.remove('sm:grid-cols-1');
-      featuresContainer.classList.add('md:grid-cols-3'); 
-      
-      featuresContainer.style.display = 'flex';
-      featuresContainer.style.flexDirection = 'row'; 
-      featuresContainer.style.justifyContent = 'center';
-      featuresContainer.style.alignItems = 'center';
-  }
-}
-
-window.addEventListener('load', adjustLayoutBasedOnScreenSize);
-window.addEventListener('resize', adjustLayoutBasedOnScreenSize);
-</script>
+</div>
 
 <!-- Coming Soon Section -->
-<section id="coming-soon" class="py-16 text-center bg-gray-50">
-  <div class="container px-4 mx-auto">
-    <h4 class="mb-6 text-xl font-semibold">To be released soon...</h4>
-    <div class="relative flex flex-col items-center justify-between md:flex-row md:items-center md:justify-end">
-      
-        <div class="flex flex-col items-start mb-6 md:mr-6 md:mb-0" style="padding-right: 10px; padding-left: 10px;">
-          <button type="button"
-            class="px-4 py-2 inline-flex items-center justify-center w-full rounded-lg text-white text-xl tracking-wider border-none outline-none bg-black hover:bg-[#222] active:bg-black mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="36px" fill="#fff" class="inline mr-2" viewBox="0 0 22.773 22.773">
-              <path d="M15.769 0h.162c.13 1.606-.483 2.806-1.228 3.675-.731.863-1.732 1.7-3.351 1.573-.108-1.583.506-2.694 1.25-3.561C13.292.879 14.557.16 15.769 0zm4.901 16.716v.045c-.455 1.378-1.104 2.559-1.896 3.655-.723.995-1.609 2.334-3.191 2.334-1.367 0-2.275-.879-3.676-.903-1.482-.024-2.297.735-3.652.926h-.462c-.995-.144-1.798-.932-2.383-1.642-1.725-2.098-3.058-4.808-3.306-8.276v-1.019c.105-2.482 1.311-4.5 2.914-5.478.846-.52 2.009-.963 3.304-.765.555.086 1.122.276 1.619.464.471.181 1.06.502 1.618.485.378-.011.754-.208 1.135-.347 1.116-.403 2.21-.865 3.652-.648 1.733.262 2.963 1.032 3.723 2.22-1.466.933-2.625 2.339-2.427 4.74.176 2.181 1.444 3.457 3.028 4.209z" />
-            </svg>
-            <div>
-              <p class="text-[10px] text-white leading-none text-left">Download on the</p>
-              App Store
-            </div>
-          </button>
-          <button type="button"
-            class="px-4 py-2 inline-flex items-center justify-center w-full rounded-lg text-white text-xl tracking-wider border-none outline-none bg-black hover:bg-[#222] active:bg-black">
-            <svg xmlns="http://www.w3.org/2000/svg" width="36px" fill="#fff" class="inline mr-2" viewBox="0 0 64 64">
-              <path fill="#57cef3" d="M7 3v58l33-29z" />
-              <path fill="#fff200" d="m36 32 8-10 15 10-15 10z" />
-              <path fill="#48ff48" d="M36 32 7 3h4l34 20z" />
-              <path fill="#ff6c58" d="M36 32 7 61h4l34-20z" />
-              <path fill="#f33"
-                d="M9.1 64c-1.9 0-3.6-1-4.5-2.6L8 58.2v.7c0 .3.1.6.3.8L24 44c7.4 0 14.1-1.2 18.3-3.1l5.8-3.4v4.6L11.7 63.3c-.7.5-1.6.7-2.6.7z" />
-              <path fill="#0779e4"
-                d="M9.1 4C8.5 4 8 4.5 8 5.1V36c0 4.4 7.2 8 16 8L5.5 62.5c-.9-.9-1.5-2.2-1.5-3.6V5.1C4 2.3 6.3 0 9.1 0z" />
-              <path fill="#314a52"
-                d="M8.3 4.3c.2-.2.5-.3.8-.3.2 0 .4.1.6.2l45.5 26.6c.5.2.8.7.8 1.2s-.3 1-.7 1.3l-11.4 6.6 2.9 2.9 10.4-6.1c1.7-1 2.7-2.8 2.7-4.7s-1-3.8-2.7-4.7L11.7.7C11 .2 10.1 0 9.1 0 7.7 0 6.4.6 5.5 1.5z" />
-            </svg>
-            <div>
-              <p class="text-[10px] text-white leading-none text-left">Get it on</p>
-              Google Play
-            </div>
-          </button>
-        </div>
-      <!-- Image and Description -->
-<div class="relative flex items-center justify-center" style="padding-right: 60px; padding-left: 400px; margin-right: 60px;"> 
+<div class="bg-[#F7F7F7] font-[sans-serif]">
+  <div class="max-w-6xl px-4 py-16 mx-auto">
+    <h2 class="mb-16 text-4xl font-semibold text-center text-gray-800">To be released soon...</h2>
+    <div class="flex flex-col items-center justify-between mb-6 md:flex-row" style="padding: 10px;">
+      <!-- App Store & Google Play Buttons -->
+      <div class="flex flex-col items-start mb-6 md:mb-0">
+        <button type="button"
+          class="px-4 py-2 inline-flex items-center justify-center w-full rounded-lg text-white text-xl tracking-wider border-none outline-none bg-black hover:bg-[#222] active:bg-black mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="36px" fill="#fff" class="inline mr-2" viewBox="0 0 22.773 22.773">
+            <path d="M15.769 0h.162c.13 1.606-.483 2.806-1.228 3.675-.731.863-1.732 1.7-3.351 1.573-.108-1.583.506-2.694 1.25-3.561C13.292.879 14.557.16 15.769 0zm4.901 16.716v.045c-.455 1.378-1.104 2.559-1.896 3.655-.723.995-1.609 2.334-3.191 2.334-1.367 0-2.275-.879-3.676-.903-1.482-.024-2.297.735-3.652.926h-.462c-.995-.144-1.798-.932-2.383-1.642-1.725-2.098-3.058-4.808-3.306-8.276v-1.019c.105-2.482 1.311-4.5 2.914-5.478.846-.52 2.009-.963 3.304-.765.555.086 1.122.276 1.619.464.471.181 1.06.502 1.618.485.378-.011.754-.208 1.135-.347 1.116-.403 2.21-.865 3.652-.648 1.733.262 2.963 1.032 3.723 2.22-1.466.933-2.625 2.339-2.427 4.74.176 2.181 1.444 3.457 3.028 4.209z" />
+          </svg>
+          <div>
+            <p class="text-[10px] text-white leading-none text-left">Download on the</p>
+            App Store
+          </div>
+        </button>
+        <button type="button"
+          class="px-4 py-2 inline-flex items-center justify-center w-full rounded-lg text-white text-xl tracking-wider border-none outline-none bg-black hover:bg-[#222] active:bg-black">
+          <svg xmlns="http://www.w3.org/2000/svg" width="36px" fill="#fff" class="inline mr-2" viewBox="0 0 64 64">
+            <path fill="#57cef3" d="M7 3v58l33-29z" />
+            <path fill="#fff200" d="m36 32 8-10 15 10-15 10z" />
+            <path fill="#48ff48" d="M36 32 7 3h4l34 20z" />
+            <path fill="#ff6c58" d="M36 32 7 61h4l34-20z" />
+            <path fill="#f33"
+              d="M9.1 64c-1.9 0-3.6-1-4.5-2.6L8 58.2v.7c0 .3.1.6.3.8L24 44c7.4 0 14.1-1.2 18.3-3.1l5.8-3.4v4.6L11.7 63.3c-.7.5-1.6.7-2.6.7z" />
+            <path fill="#0779e4"
+              d="M9.1 4C8.5 4 8 4.5 8 5.1V36c0 4.4 7.2 8 16 8L5.5 62.5c-.9-.9-1.5-2.2-1.5-3.6V5.1C4 2.3 6.3 0 9.1 0z" />
+            <path fill="#314a52"
+              d="M8.3 4.3c.2-.2.5-.3.8-.3.2 0 .4.1.6.2l45.5 26.6c.5.2.8.7.8 1.2s-.3 1-.7 1.3l-11.4 6.6 2.9 2.9 10.4-6.1c1.7-1 2.7-2.8 2.7-4.7s-1-3.8-2.7-4.7L11.7.7C11 .2 10.1 0 9.1 0 7.7 0 6.4.6 5.5 1.5z" />
+          </svg>
+          <div>
+            <p class="text-[10px] text-white leading-none text-left">Get it on</p>
+            Google Play
+          </div>
+        </button>
+      </div>
+     <!-- Center Image Ring -->
+<div class="relative flex items-center justify-center" style="padding-left: 100px; padding-right: 60px;">
   <div class="flex items-center justify-center rounded-full w-72 h-72 ring-2 ring-gray-400">
     <div class="flex items-center justify-center rounded-full w-60 h-60 ring-2 ring-gray-400">
       <div class="flex items-center justify-center w-48 h-48 rounded-full ring-2 ring-gray-400">
-        <img src="assets/start.png" alt="Phone Mockup" class="w-[2900px] h-[2200px]" />
+        <img src="assets/start.png" alt="Phone Mockup" class="w-48 h-48 rounded-full" />
       </div>
     </div>
   </div>
 </div>
-<!-- Text Description -->
-<div class="mb-6 md:text-left md:w-1/2 md:mr-16 md:mb-0" style="padding-right: 5px; padding-left: 100px; margin-right: 20px;"> 
-  <p class="mb-6 text-gray-700" style="font-size: 18px;"> 
-    Achieve flawless skin with Skinsense! Get personalized skincare solutions with advanced technology. <br> 
-    Say goodbye to guesswork and hello to a routine that works.  <br> 
-    Enjoy clear, glowing skin with Skinsense!
-  </p>
-</div>
-    </div>
+      <!-- Description Text -->
+      <div class="mb-6 md:text-left md:w-1/2" style="padding: 0 5px;">
+        <p class="mb-6 text-gray-700" style="font-size: 18px;"> 
+          Achieve flawless skin with Skinsense! Get personalized skincare solutions with advanced technology.<br> 
+          Say goodbye to guesswork and hello to a routine that works.<br> 
+          Enjoy clear, glowing skin with Skinsense!
+        </p>
+      </div>
+    </div>    
   </div>
-</section>
+</div>
 
 <!-- Footer Section -->
 <footer class="py-10 mx-4 mt-auto text-gray-600 bg-gray-200 rounded-t-lg md:mx-8">
@@ -315,6 +241,7 @@ window.addEventListener('resize', adjustLayoutBasedOnScreenSize);
         </div>
       </div>
     </div>
+
     <!-- Copyright Text -->
     <div class="mt-6 text-left">
       <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
