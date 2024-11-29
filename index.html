@@ -10,19 +10,47 @@
     <title>Skinsense - Coming Soon</title>
   </head>
   
-<!-- Navbar -->
-<body class="bg-gray-50">
+  <!-- Sidebar for Mobile -->
+  <div
+    id="sidebar"
+    class="fixed inset-y-0 left-0 w-2/3 h-full z-20 flex flex-col hidden transition-transform transform -translate-x-full bg-blue-700 bg-opacity-100 md:hidden"
+  >
+    <div class="flex items-center justify-between p-4">
+      <img src="assets/Logo1.svg" alt="Logo Skinsense" class="w-20 h-auto bg-zinc-800" />
+      <button
+      id="close-button"
+      class="absolute top-4 right-4 flex items-center justify-center text-3xl text-white"
+    >
+      &times;
+    </button>
+    </div>
+  <ul class="mt-8 space-y-4 text-xl text-left text-white px-10">
+    <li><a href="#home" class="hover:text-blue-200">Home</a></li>
+    <li><a href="#features" class="hover:text-blue-200">Feature</a></li>
+    <li><a href="#blog" class="hover:text-blue-200">Blog</a></li>
+    <li><a href="#support" class="hover:text-blue-200">Support</a></li>
+  </ul>
+    <div class="mt-auto mb-4 text-center">
+      <a
+        href="#"
+        class="px-16 py-2 font-semibold text-blue-700 bg-white border border-blue-700 rounded-lg hover:bg-blue-700 hover:text-white"
+        >Sign In</a
+      >
+    </div>
+  </div>
+
+  <!-- Navbar -->
   <div class="bg-white">
-    <header class="fixed inset-x-0 top-0 z-50 shadow-md">
-      <nav class="flex items-center justify-between w-full p-6 transition-all duration-300 ease-in-out bg-white lg:px-8" aria-label="Global">
+    <header id="navbar" class="fixed inset-x-0 top-0 z-50 shadow-md transition-all duration-300">
+      <nav class="flex items-center justify-between w-full p-6 bg-white lg:px-8" aria-label="Global">
         <div class="container flex lg:flex-1">
           <a href="#" class="flex items-center -m-1.5 p-1.5">
-            <img class="w-auto h-10 lg:h-12" src="assets/logo.png?color=indigo&shade=6000" alt="Logo">
+            <img class="w-auto h-10 lg:h-12" src="assets/logo.png" alt="Logo">
             <span class="ml-2 text-lg font-semibold text-gray-900 lg:text-xl">Skinsense</span>
           </a>
         </div>
         <div class="flex lg:hidden">
-          <button type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+          <button id="menu-button" type="button" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
             <span class="sr-only">Open main menu</span>
             <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -41,6 +69,28 @@
       </nav>
     </header>
   </div>
+
+  <!-- JavaScript for Sidebar -->
+  <script>
+    const menuButton = document.getElementById("menu-button");
+    const closeButton = document.getElementById("close-button");
+    const sidebar = document.getElementById("sidebar");
+    const navbar = document.getElementById("navbar");
+  
+    menuButton.addEventListener("click", () => {
+      sidebar.classList.toggle("-translate-x-full");
+      sidebar.classList.toggle("hidden");     
+      navbar.classList.add("opacity-0", "pointer-events-none"); 
+    });
+  
+    closeButton.addEventListener("click", () => {
+      sidebar.classList.toggle("-translate-x-full");
+      sidebar.classList.toggle("hidden");       
+      navbar.classList.remove("opacity-0", "pointer-events-none");
+    });
+  </script>
+  
+
 
 <!-- Hero Section -->
 <div class="relative px-16 pt-8 isolate lg:px-8">
@@ -64,64 +114,65 @@
   </div>
 </div>
 
-<!-- About Section -->
-<div class="py-16 bg-black rounded-lg" style="width: 1400px; height: 600px; margin: 0 auto; position: relative;">
-  <h3 class="absolute z-10 text-2xl font-semibold text-gray-400" style="top: 10%; width: 100%; text-align: center;">
-      We Made Scanning Skin <span class="text-blue-500">Easier!</span>
-  </h3>
-  
-  <!-- Ring Background -->
-  <div class="absolute inset-0 z-0 flex flex-col items-center justify-center" style="top: 20%;">
-      <div class="flex items-center justify-center rounded-full ring-2 ring-gray-500" style="width: 450px; height: 450px;">
-          <div class="flex items-center justify-center rounded-full ring-2 ring-gray-500" style="width: 400px; height: 400px;">
-              <div class="flex items-center justify-center rounded-full ring-2 ring-gray-500" style="width: 350px; height: 350px;"></div>
-          </div>
-      </div>
-  </div>
-  
-  <!-- Features Section -->
-<div class="container relative z-10 flex items-center justify-center py-10 mx-auto" id="featuresContainer" style="margin-top: 40px;">
-  <div class="grid gap-8 sm:grid-cols-1 md:grid-cols-3" style="max-width: 1200px; width: 100%;">
-    <div class="p-6 text-center bg-gray-200 rounded-lg shadow-lg" id="feature1" style="width: 300px; height: 400px;">
-      <h4 class="mb-4 text-lg font-semibold text-black">Recommend Product Skincare</h4>
-      <table class="mx-auto mb-4">
-        <tr>
-          <td>
-            <img src="assets/product.png" alt="Recommend Product Skincare" 
-                 class="feature-image" 
-                 style="width: 100%; height: 100%; object-fit: cover;" />
-          </td>
-        </tr>
-      </table>
-    </div>
+ <!-- About Section -->
+ <section id="about" class="py-10 mx-4 bg-black md:mx-8" style="border-radius: 15px;">
+  <!-- Isi konten -->
+  <div class="container relative px-4 mx-auto text-center">
 
-    <div class="p-6 text-center bg-gray-200 rounded-lg shadow-lg" id="feature2" style="width: 300px; height: 400px;">
-      <h4 class="mb-4 text-lg font-semibold text-black">Detection Your Skin</h4>
-      <table class="mx-auto mb-4">
-        <tr>
-          <td>
-            <img src="assets/scan.png" alt="Detection Your Skin" 
-                 class="feature-image" 
-                 style="width: 100%; height: 100%; object-fit: cover;" />
-          </td>
-        </tr>
-      </table>
-    </div>
-
-    <div class="p-6 text-center bg-gray-200 rounded-lg shadow-lg" id="feature3" style="width: 300px; height: 400px;">
-      <h4 class="mb-4 text-lg font-semibold text-black">Tracking Your Progress</h4>
-      <table class="mx-auto mb-4">
-        <tr>
-          <td>
-            <img src="assets/track.png" alt="Tracking Your Progress" 
-                 class="feature-image" 
-                 style="width: 100%; height: 100%; object-fit: cover;" />
-          </td>
-        </tr>
-      </table>
-    </div>
+   <!-- Centered Circle Background -->
+<div class="absolute inset-0 z-0 flex flex-col items-center justify-center top-[20%]">
+<div class="flex items-center justify-center rounded-full ring-2 ring-gray-500 
+            w-72 h-72 sm:w-96 sm:h-96 md:w-[450px] md:h-[450px]">
+<div class="flex items-center justify-center rounded-full ring-2 ring-gray-500 
+            w-60 h-60 sm:w-80 sm:h-80 md:w-[400px] md:h-[400px]">
+ <div class="flex items-center justify-center rounded-full ring-2 ring-gray-500 
+            w-52 h-52 sm:w-72 sm:h-72 md:w-[350px] md:h-[350px]">
   </div>
 </div>
+</div>
+</div>
+
+
+    <!-- Main Heading with Circle Background -->
+    <div class="relative z-10">
+      <h3 class="mb-8 text-2xl font-semibold text-gray-400">
+        We Made Scanning Skin <span class="text-blue-500">Easier!</span>
+      </h3>
+    </div>
+
+    <!-- Features Section inside About Section -->
+    <section id="features">
+    <div class="container relative z-10 grid gap-8 px-4 mx-auto md:grid-cols-3">
+      <div class="p-6 text-center bg-gray-200 shadow-lg" style="border-radius: 15px;">
+        <h4 class="mb-4 text-lg font-semibold">
+          Recommend Product Skincare
+        </h4>
+        <img
+          src="assets/product.png"
+          alt="Recommend Product Skincare"
+          class="mx-auto mb-4"
+        />
+      </div>
+      <div class="p-6 text-center bg-gray-200 shadow-lg" style="border-radius: 15px;">
+        <h4 class="mb-4 text-lg font-semibold">Detection Your Skin</h4>
+        <img
+          src="assets/scan.png"
+          alt="Detection Your Skin"
+          class="mx-auto mb-4"
+        />
+      </div>
+      <div class="p-6 text-center bg-gray-200 shadow-lg" style="border-radius: 15px;">
+        <h4 class="mb-4 text-lg font-semibold">Tracking Your Progress</h4>
+        <img
+          src="assets/track.png"
+          alt="Tracking Your Progress"
+          class="mx-auto mb-4"
+        />
+      </div>
+    </div>
+    
+  </div>
+</section>
 
 <!-- Coming Soon Section -->
 <div class="bg-[#F7F7F7] font-[sans-serif]">
@@ -284,5 +335,5 @@
     </div>
   </div>  
 </footer>
-  </body>
+</body>
 </html>
